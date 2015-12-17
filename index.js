@@ -64,7 +64,7 @@ var count = 0;
 function getStringName(node) {
     var str = node.getValue(); // node is AST_String
     if (strings.hasOwnProperty(str)) return strings[str];
-    var name = "_" + (++count);
+    var name = "$OB_" + (++count);
     console.log("in" + str);
     return strings["$DEF_" + str] = { name: name, node: node };
 }
